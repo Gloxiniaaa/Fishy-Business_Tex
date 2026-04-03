@@ -1,0 +1,177 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+
+\definecolor{BKTemplate}{rgb}{0.11765, 0.30588, 0.47451}
+\usecolortheme[named=BKTemplate]{structure}
+\setbeamercolor{title}{fg=BKTemplate,bg=} 
+\setbeamertemplate{caption}[numbered]
+
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}    % use T5 fonts for Vietnamese
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{comment}
+\usepackage{forest}
+\usepackage[linesnumbered, ruled]{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{diagbox}
+\usepackage{tikz}
+\usepackage{subcaption}
+% \captionsetup[subfigure]{labelsep=space}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{stmaryrd}
+\usepackage[style=authortitle,backend=bibtex]{biblatex}
+% \addbibresource{thesiscite.bib}
+
+\renewcommand{\footnotesize}{\tiny}
+\newcommand{\mathbi}[1]{\boldsymbol{#1}}
+\newtheorem{proposition}{Proposition}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Đồ Án Chuyên Ngành HK251] %optional
+{\vspace*{1cm}\\\textbf{\large BÁO CÁO ĐỒ ÁN CHUYÊN NGÀNH}}
+
+\subtitle{\textbf{\Large PHÁT TRIỂN GAME FISHY-BUSINESS}}
+
+\author[Nhóm Fishy-Business] % (optional)Hội Đồng: 14L
+{\textbf{Hội Đồng:} 14L\\
+\textbf{Mã Đề tài:} HK251-DAGD1-478 \\
+\textbf{GVHD:} ThS. Vương Bá Thịnh\\
+\vspace{0.2cm}
+\textbf{SVTH:} Lê Ngọc Hiền (2211024)\\
+Huỳnh Trần Học Đăng (2210731)\\
+Nguyễn Mạnh Hùng (2211337)}
+\vspace{-0.2cm}
+\institute[HCMUT] % (optional)
+{
+  Khoa KH\&KT Máy tính
+}
+\date[Dec 2025] % (optional)
+% {Tháng 12, 2025}
+
+%End of title page configuration block
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Nội dung chính}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+
+% The next statement creates the title page.
+\setbeamertemplate{background canvas}{
+	\includegraphics[width=\paperwidth,height=\paperheight]{images/FrontBackground.pdf}
+}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+% Set background for all pages
+\setbeamertemplate{background canvas}{
+	\includegraphics[width=\paperwidth,height=\paperheight]{images/Background.pdf}
+}
+
+% \begin{frame}
+% \frametitle{PHÂN CHIA CÔNG VIỆC}
+% \begin{itemize}
+%     \item \textbf{Lê Bá Khánh (2211509):} 
+%     Xây dựng thuật toán Minimax với Alpha-Beta Pruning, thiết kế hàm đánh giá heuristic (Piece-Square Tables, Killer Instinct), triển khai Random Agent và Minimax Agent. (100\%)
+
+%     \item \textbf{Nguyễn Mạnh Hùng (2211337):} 
+%     Thuyết trình, thiết kế giao diện Pygame, xử lý sự kiện chuột/bàn phím, hiển thị bàn cờ và quân cờ, implement GameState class và tích hợp với python-chess. (100\%)
+
+%     \item \textbf{Đoàn Trí Hùng (2211322):} 
+%     Viết báo cáo, slide thuyết trình, phân tích kết quả thực nghiệm, tổng hợp tài liệu tham khảo, so sánh hiệu năng các Agent và đánh giá win rate. (100\%)
+
+%     \item \textbf{Nguyễn Mạnh Tuấn (2213786):} 
+%     Xử lý dữ liệu PGN, huấn luyện mô hình Deep Learning với TensorFlow, tối ưu hóa GPU acceleration, triển khai ML Agent với batch prediction. (100\%)
+% \end{itemize}
+% \end{frame}
+
+%---------------------------------------------------------
+%This block of code is for the table of contents after
+%the title page
+\begin{frame}
+\frametitle{Nội dung chính}
+\tableofcontents
+\end{frame}
+
+% ================= SECTION 1: GIỚI THIỆU =================
+% \section{Giới thiệu}
+% \input{Sections/intro}
+
+% % ================= SECTION 2: HỆ THỐNG =================
+% \section{Tổng quan Hệ thống}
+% \input{Sections/system}
+
+% % ================= SECTION 3: DỮ LIỆU =================
+% \section{Dữ liệu và Môi trường}
+% \input{Sections/preprocessing}
+
+% % ================= SECTION 4: THUẬT TOÁN =================
+% \section{Thuật toán \& Mô hình}
+% \input{Sections/algorithm}
+
+% % ================= SECTION 5: KẾT QUẢ =================
+% \section{Kết quả Thực nghiệm}
+% \input{Sections/result}
+
+% % ================= SECTION 6: KẾT LUẬN =================
+% \section{Kết luận}
+% \input{Sections/conclusion}
+
+
+
+\input{sec/1}
+\input{sec/2}
+\input{sec/3}
+\input{sec/4}
+
+
+
+\setbeamertemplate{footline}{}
+
+\begin{frame}
+    \centering
+    \vspace{1cm}
+    \textbf{\Huge{- THE END - }}\\
+    \vspace{0.2cm}
+    \textit{\Large{Cảm ơn thầy/cô đã lắng nghe phần trình bày của nhóm em}}\\
+    \vspace{15pt}
+    % \begin{columns}
+    %     \begin{column}{0.6\textwidth}
+    %         \centering
+    %         \includegraphics[width=0.8\textwidth]{images/paper.jpg}
+    %     \end{column}
+    %     \begin{column}{0.4\textwidth}
+    %         \centering
+    %        Q \& A
+    %     \end{column}
+    % \end{columns}
+\end{frame}
+
+% \input{Sections/reference}
+
+\end{document}

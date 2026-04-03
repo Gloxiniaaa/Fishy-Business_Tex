@@ -1,0 +1,218 @@
+% =========================================================
+\section{III. Các Vấn Đề \& Giải Pháp}
+% =========================================================
+
+% SLIDE 8: Quy Trình Phát Triển dự án
+\begin{frame}
+\frametitle{Quy Trình Phát Triển Dự Án}
+\textbf{So sánh các giải pháp:}
+\begin{itemize}
+    \item \textbf{Mô hình Waterfall:} Ổn định nhưng cứng nhắc, khó quay lại giai đoạn trước.
+    \item \textbf{Mô hình sử dụng Agile tự do:} Linh hoạt, tăng cường làm việc nhóm nhưng khó kiểm soát tiến độ.
+    \item \textbf{Mô hình Scrum:} Chia nhỏ giai đoạn (Sprint), sản phẩm hoàn thiện sau mỗi chu kỳ.
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Lựa chọn: Mô hình Scrum}
+\begin{itemize}
+    \item Phù hợp với khung thời gian cố định và yêu cầu làm việc nhóm của đồ án.
+    \item Quản lý tiến độ chặt chẽ qua từng Sprint (2 tuần).
+\end{itemize}
+\end{frame}
+
+% SLIDE 9: Công Cụ Hỗ Trợ
+\begin{frame}
+\frametitle{Công Cụ Hỗ Trợ}
+\begin{itemize}
+    \item \textbf{Discord:} Giao tiếp, họp nhóm và chia sẻ tài nguyên nhanh.
+    \item \textbf{Git \& GitHub:} Quản lý mã nguồn phân tán, hỗ trợ làm việc song song (Branch/Merge).
+    \item \textbf{Jira:} Quản lý task (To Do, In Progress, Done) và theo dõi tiến độ Sprint theo mô hình Scrum.
+\end{itemize}
+
+\begin{figure}[htbp]
+     \centering
+     % Hình thứ nhất
+     \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/Discord.png}
+         \label{fig:discord}
+     \end{subfigure}
+     \hfill % Tạo khoảng trống giữa các hình
+     % Hình thứ hai
+     \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/Git.png}
+         \label{fig:git}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/Github.png}
+         \label{fig:github}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/Jira.png}
+         \label{fig:jira}
+     \end{subfigure}
+     \label{fig:three_graphs}
+\end{figure}
+\end{frame}
+
+% SLIDE 10: Game Engine
+\begin{frame}
+\frametitle{Game Engine}
+\textbf{So sánh:}
+\begin{itemize}
+    \item \textbf{Unreal Engine:} Đồ họa AAA, dùng C++/Blueprint, nhưng nặng và phức tạp.
+    \item \textbf{Godot:} Mã nguồn mở, nhẹ, miễn phí, nhưng cộng đồng nhỏ hơn.
+    \item \textbf{Unity:} Hỗ trợ đa nền tảng mạnh mẽ, cộng đồng lớn, dùng C\#.
+\end{itemize}
+\begin{figure}[htbp]
+     \centering
+     % Hình thứ nhất
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/Unreal.png}
+         \label{fig:unreal}
+     \end{subfigure}
+     \hfill % Tạo khoảng trống giữa các hình
+     % Hình thứ hai
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/Godot.png}
+         \label{fig:godot}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/Unity.png}
+         \label{fig:unity}
+     \end{subfigure}
+     \label{fig:engine}
+\end{figure}
+\textbf{Lựa chọn: Unity 6}
+\begin{itemize}
+    \item Cân bằng giữa hiệu năng và tính dễ sử dụng của ngôn ngữ C\#.
+    \item Hệ sinh thái hỗ trợ Multiplayer (Netcode, Vivox) phong phú, phù hợp quy mô, mục tiêu dự án.
+\end{itemize}
+\end{frame}
+
+% SLIDE 11: So Sánh Giải Pháp Netcode
+\begin{frame}
+\frametitle{Các Giải Pháp Netcode}
+\textbf{So sánh:}
+\begin{itemize}
+    \item \textbf{Photon (PUN/Fusion):} Dễ dùng nhưng chi phí cao khi scale.
+    \item \textbf{Mirror:} Mã nguồn mở, miễn phí nhưng cần tự xử lý logic server phức tạp.
+    \item \textbf{Netcode for GameObjects (NGO):} Giải pháp chính chủ, khuyến nghị của Unity.
+\end{itemize}
+\begin{figure}[htbp]
+     \centering
+     % Hình thứ nhất
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/Photon.jpg}
+         \label{fig:photon}
+     \end{subfigure}
+     \hfill % Tạo khoảng trống giữa các hình
+     % Hình thứ hai
+     \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/mirror.jpg}
+         \label{fig:mirror}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/NGO.png}
+         \label{fig:NGO}
+     \end{subfigure}
+     \label{fig:netcode}
+\end{figure}
+\textbf{Lựa chọn: Unity NGO}
+\begin{itemize}
+    \item Giải pháp chính thức, tương thích cao với Unity Services (Relay, Lobby).
+    \item Miễn phí cho quy mô nhỏ (<50 CCU), phù hợp dự án học thuật.
+\end{itemize}
+\end{frame}
+
+% SLIDE 12: So Sánh Kiến Trúc Mạng
+\begin{frame}
+\frametitle{Các Kiến Trúc Mạng}
+\textbf{Mô hình:}
+\begin{itemize}
+    \item \textbf{Client-Server (Dedicated):} Ổn định, công bằng, bảo mật cao nhưng tốn chi phí server.
+    \item \textbf{Client-Host:} Một người chơi làm máy chủ, đơn giản, tiết kiệm chi phí.
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Lựa chọn (Giai đoạn 1): Client-Host}
+\begin{itemize}
+    \item Tối ưu tốc độ phát triển và chi phí (không cần thuê server).
+    \item Phù hợp thử nghiệm gameplay, dễ debug.
+    \item \textit{Định hướng Giai đoạn 2: Chuyển sang Dedicated Server để tăng ổn định}.
+\end{itemize}
+\end{frame}
+
+% SLIDE 13: Hệ Thống Voice Chat
+\begin{frame}
+\frametitle{Hệ Thống Voice Chat: Vivox}
+\textbf{So sánh:}
+\begin{itemize}
+    \item \textbf{Dissonance:} Tùy biến cao, trả phí (Asset Store), cần tự setup backend.
+    \item \textbf{Photon Voice:} Tốt cho game realtime nhưng thường đi kèm gói trả phí của Photon.
+    \item \textbf{Vivox:} Giải pháp chuyên nghiệp, tích hợp sẵn trong Unity Services.
+\end{itemize}
+\begin{figure}[htbp]
+     \centering
+     % Hình thứ nhất
+     \begin{subfigure}[b]{0.25\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/photon-voice.jpg}
+         \label{fig:photon-voice}
+     \end{subfigure}
+     \hfill % Tạo khoảng trống giữa các hình
+     % Hình thứ hai
+     \begin{subfigure}[b]{0.25\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/dissonance.jpg}
+         \label{fig:dissonance}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/vivox.jpg}
+         \label{fig:vivox}
+     \end{subfigure}
+     \label{fig:voice-chat}
+\end{figure}
+\textbf{Lựa chọn: Vivox}
+\begin{itemize}
+    \item Miễn phí lên đến 5000 PCU, chất lượng âm thanh tốt.
+    \item API dễ tích hợp, hỗ trợ channel-based chat.
+\end{itemize}
+\end{frame}
+
+% SLIDE 14: Design Patterns Áp Dụng
+\begin{frame}
+\frametitle{Design Patterns Áp Dụng}
+\begin{itemize}
+    \item \textbf{Singleton Pattern:}
+    \begin{itemize}
+        \item Quản lý các hệ thống duy nhất: \texttt{GameManager}, \texttt{NetworkManager}.
+        \item Cung cấp điểm truy cập toàn cục tiện lợi.
+    \end{itemize}
+    
+    \item \textbf{Observer Pattern (ScriptableObjects):}
+    \begin{itemize}
+        \item Dùng Event Channels để giảm sự phụ thuộc (decoupling) giữa các module.
+        \item Dễ dàng mở rộng, bảo trì logic game.
+    \end{itemize}
+    
+    \item \textbf{State Pattern:}
+    \begin{itemize}
+        \item Quản lý trạng thái nhân vật: \texttt{Idle}, \texttt{Move}, \texttt{Jump}.
+        \item Tách biệt logic hành vi, dễ dàng thêm trạng thái mới.
+    \end{itemize}
+\end{itemize}
+\end{frame}
