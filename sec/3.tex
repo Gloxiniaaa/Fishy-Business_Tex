@@ -146,39 +146,44 @@
     \item \textbf{Client-Host:} Một người chơi làm máy chủ, đơn giản, tiết kiệm chi phí.
 \end{itemize}
 \vspace{0.5cm}
-\textbf{Lựa chọn (Giai đoạn 1): Client-Host}
+\textbf{Lựa chọn: Client-Host}
 \begin{itemize}
     \item Tối ưu tốc độ phát triển và chi phí (không cần thuê server).
     \item Phù hợp thử nghiệm gameplay, dễ debug.
-    \item \textit{Định hướng Giai đoạn 2: Chuyển sang Dedicated Server để tăng ổn định}.
+    \item \textit{Định hướng trong tương lai:} Chuyển sang Dedicated Server để tăng ổn định.
 \end{itemize}
 \end{frame}
 
-% SLIDE 13: Hệ Thống Voice Chat
+% SLIDE 13: Hệ Thống Voice-Text Chat
 \begin{frame}
-\frametitle{Hệ Thống Voice Chat: Vivox}
+\frametitle{Hệ Thống Voice-Text Chat: Vivox}
 \textbf{So sánh:}
 \begin{itemize}
     \item \textbf{Dissonance:} Tùy biến cao, trả phí (Asset Store), cần tự setup backend.
-    \item \textbf{Photon Voice:} Tốt cho game realtime nhưng thường đi kèm gói trả phí của Photon.
+    \item \textbf{Photon Voice-Chat:} Tốt cho game realtime nhưng thường đi kèm gói trả phí của Photon.
     \item \textbf{Vivox:} Giải pháp chuyên nghiệp, tích hợp sẵn trong Unity Services.
 \end{itemize}
 \begin{figure}[htbp]
      \centering
-     % Hình thứ nhất
-     \begin{subfigure}[b]{0.25\textwidth}
-         \centering
-        \includegraphics[width=\textwidth]{img/photon-voice.jpg}
-         \label{fig:photon-voice}
-     \end{subfigure}
-     \hfill % Tạo khoảng trống giữa các hình
-     % Hình thứ hai
-     \begin{subfigure}[b]{0.25\textwidth}
+     \begin{subfigure}[b]{0.2\textwidth}
          \centering
         \includegraphics[width=\textwidth]{img/dissonance.jpg}
          \label{fig:dissonance}
      \end{subfigure}
      \hfill
+     % Hình thứ nhất
+     \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/photon-voice.jpg}
+         \label{fig:photon-voice}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.2\textwidth}
+         \centering
+        \includegraphics[width=\textwidth]{img/photon-chat.jpg}
+         \label{fig:photon-chat}
+     \end{subfigure}
+     \hfill % Tạo khoảng trống giữa các hình
+     % Hình thứ hai
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
         \includegraphics[width=\textwidth]{img/vivox.jpg}
@@ -189,7 +194,8 @@
 \textbf{Lựa chọn: Vivox}
 \begin{itemize}
     \item Miễn phí lên đến 5000 PCU, chất lượng âm thanh tốt.
-    \item API dễ tích hợp, hỗ trợ channel-based chat.
+    \item API dễ tích hợp.
+    \item Tích hợp text chat nhanh chóng.
 \end{itemize}
 \end{frame}
 
