@@ -1,0 +1,105 @@
+% =========================================================
+\section{III. Phân Tích Yêu Cầu Hệ Thống}
+% =========================================================
+
+% SLIDE 6: Yêu Cầu Chức Năng
+\begin{frame}
+\frametitle{Yêu Cầu Chức Năng}
+\begin{columns}
+    \column{0.5\textwidth}
+    \textbf{Gameplay (Core Loop)}
+    \begin{itemize}
+        \item Quản lý phòng: Tạo/Tham gia (Host/Join).
+        \item Cơ chế chia bài \& Phân vai ngẫu nhiên (Role).
+        \item Logic đặt thẻ đường (Path validation).
+        \item Logic sử dụng thẻ hành động (Action validation).
+        \item Logic chuyển đổi giữa các giai đoạn (ngày, đêm, thảo luận, bình chọn) của chế độ mới.
+        \item Điều kiện thắng/thua: Tìm được vàng hoặc hết bài.
+    \end{itemize}
+    \column{0.5\textwidth}
+    \textbf{Xã hội \& Tương tác}
+    \begin{itemize}
+        \item Điều khiển nhân vật 3D.
+        \item Hệ thống nhạc cụ.
+        \item Hệ thống thời trang.
+        \item Giao tiếp: Voice-Text Chat \& Emotes.
+    \end{itemize}
+\end{columns}
+\end{frame}
+
+% SLIDE 7: Yêu Cầu Phi Chức Năng
+\begin{frame}
+\frametitle{Yêu Cầu Phi Chức Năng}
+\begin{itemize}
+    \item \textbf{Hiệu năng:}
+    \begin{itemize}
+        \item Duy trì tối thiểu \textbf{60 FPS} trên cấu hình tầm trung.
+        \item Thời gian tải màn chơi dưới \textbf{10 giây}.
+    \end{itemize}
+    \item \textbf{Độ trễ mạng:}
+    \begin{itemize}
+        \item Các thao tác quan trọng như đánh bài, di chuyển nhân vật phải được đồng bộ với độ trễ dưới \textbf{100ms}.
+        \item Hệ thống voice-text chat phải ổn định.
+    \end{itemize}
+    \item \textbf{Tính tin cậy:}
+    \begin{itemize}
+        \item Xử lý ngoại lệ khi người chơi mất kết nối để không bị sập phòng chơi của những người chơi còn lại.
+    \end{itemize}
+    \item \textbf{Khả năng mở rộng:}
+    \begin{itemize}
+        \item Kiến trúc code phải được tổ chức theo hướng Mô-đun hóa để dễ dàng thêm các loại bài mới, cơ chế mới hoặc bản đồ mới trong tương lai.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+% SLIDE 8: Yêu cầu kỹ thuật
+\begin{frame}
+\frametitle{Yêu Cầu Kỹ Thuật}
+\begin{itemize}
+    \item \textbf{Nền tảng vận hành:}
+        \begin{itemize}
+            \item Hệ điều hành: Windows 10 (64-bit) hoặc Windows 11.
+            \item Thiết bị ngoại vi: Bắt buộc sử dụng Chuột và Bàn phím.
+        \end{itemize}
+    \item \textbf{Công cụ phát triển game:}
+        \begin{itemize}
+            \item Hỗ trợ lập trình trên môi trường 3D đơn giản
+            \item Hỗ trợ Multiplayer
+        \end{itemize}
+    \item \textbf{Giải pháp mạng:}
+        \begin{itemize}
+            \item Sử dụng kiến trúc Client-Server hoặc Host-Client.
+            \item Thư viện mạng: Netcode for GameObjects (NGO) hoặc Photon Fusion.
+        \end{itemize}
+    \item \textbf{Tài nguyên đồ họa:}
+        \begin{itemize}
+            \item Phong cách đồ họa: Low-poly hoặc Stylized (cách điệu) để phù hợp với không khí vui nhộn và tối ưu hiệu năng.
+        \end{itemize}
+\end{itemize}
+\end{frame}
+
+% SLIDE 9: Yêu cầu trải nghiệm người dùng
+\begin{frame}
+\frametitle{Yêu Cầu Trải nghiệm người dùng}
+
+Đối với một game Party, cảm xúc của người chơi là yếu tố sống còn. Nhóm đặt ra các tiêu chuẩn UX sau:
+
+\begin{itemize}
+    \item \textbf{Tính trực quan:}
+        \begin{itemize}
+            \item Giao diện người dùng (UI) phải rõ ràng.
+            \item Các thao tác phải mượt mà, có phản hồi lại bằng âm thanh hoặc hiệu ứng hình ảnh.
+        \end{itemize}
+    \item \textbf{Tính phản hồi:}
+        \begin{itemize}
+            \item Khi người chơi tương tác, âm thanh phải phản hồi ngay lập tức để tạo cảm giác thỏa mãn.
+            \item Các thông báo quan trọng trong lúc chơi phải hiển thị nổi bật giữa màn hình.
+        \end{itemize}
+    \item \textbf{Bầu không khí:}
+        \begin{itemize}
+            \item Môi trường 3D phải tạo cảm giác thoải mái, vui vẻ.
+            \item Nhạc nền nhẹ nhàng, không ảnh hưởng đến trải nghiệm của người chơi
+        \end{itemize}
+    \item \textbf{Khả năng tiếp cận:} Cung cấp hướng dẫn hoặc Tooltip để người chơi dễ nắm bắt.
+\end{itemize}
+\end{frame}
