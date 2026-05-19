@@ -263,8 +263,8 @@ Mỗi round được chia thành hai pha chính: \textbf{Đêm} và \textbf{Ngà
 \begin{itemize}
     \item Bản đồ tạm thời hiện ra cho riêng người đó.
     \item Trong \textbf{15--30 giây} (có thể tùy chỉnh), người chơi thực hiện một trong các hành động quen thuộc như bản gốc.
-    \item Sau khi hết thời gian hoặc xác nhận hành động, bản đồ lại tối đi với người chơi đó.
     \item Bốc 1 lá bài từ chồng bài úp (nếu còn).
+    \item Bản đồ lại tối đi với người chơi đó.
 \end{itemize}
     \item Khi tất cả người chơi đã hoàn thành lượt trong đêm, pha Đêm kết thúc và chuyển sang pha Ngày.
 \end{itemize}
@@ -280,37 +280,56 @@ Mỗi round được chia thành hai pha chính: \textbf{Đêm} và \textbf{Ngà
         \item Người chơi có \textbf{60 giây} (có thể tùy chỉnh) để \textbf{trò chuyện, tranh luận, biện minh} và đọc vị nhau.
         \item Cuối pha Ngày, thực hiện \textbf{bỏ phiếu}:
         \begin{itemize}
-            \item Có thể vote \textbf{skip} (không loại ai) hoặc vote một người chơi cụ thể.
-            \item Người bị vote nhiều phiếu nhất sẽ bị \textbf{cấm chơi 1 round tiếp theo} (không được hành động trong pha Đêm của round sau).
+            \item Có thể vote \textbf{skip} hoặc vote một người chơi cụ thể.
+            \item Người bị vote nhiều phiếu nhất sẽ \textbf{không được hành động trong pha Đêm tiếp theo}.
         \end{itemize}
     \end{itemize}
 
 \end{frame}
 
-
-% % 14
+% 15
 % \begin{frame}
-% \frametitle{Kết thúc game}
-% Giữ nguyên luật thắng thua của phiên bản gốc:
-% \begin{itemize}
-% \item Phe Thiện (Chó) thắng nếu có đường thông hợp lệ từ thẻ Start đến thẻ Goal chứa vàng.
-% \item Phe Ác (Mèo) thắng nếu hết bài trên tay tất cả người chơi mà vẫn chưa nối được đường đến vàng.
-% \end{itemize}
-
+% \frametitle{Thẻ hành động mới (bổ sung thêm vào bộ bài)}
+% \begin{table}[H]
+% \centering
+% \begin{tabular}{|l|p{7cm}|p{4cm}|}
+% \hline
+% \textbf{Tên thẻ} & \textbf{Công dụng} & \textbf{Ghi chú} \\ \hline
+% \includegraphics[width=0.1\linewidth]{saboteur/role-1.png} & Người chơi sẽ có khiên vĩnh viễn có thể đỡ được 1 đòn tấn công phá công cụ (Cart, Shovel, Hat) bởi thẻ Sabotage. & Có thể áp dụng cho bất cứ ai, không tích lũy \\ \hline
+% Binoculars & Khi sử dụng thẻ này, người chơi được nhìn thấy toàn bộ bản đồ từ lúc chơi thẻ cho đến hết Đêm hiện tại. & Có thể áp dụng cho bất cứ ai\\ \hline
+% Swap Goals & Trong Đêm, tráo vị trí ngẫu nhiên hoặc chỉ định của 3 thẻ Goal (khi chúng vẫn đang úp). & Thay đổi vị trí kho vàng thực sự \\ \hline
+% \end{tabular}
+% \end{table}
 % \end{frame}
 
-% 15
 \begin{frame}
-\frametitle{Thẻ hành động mới (bổ sung thêm vào bộ bài)}
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|p{7cm}|p{5cm}|}
-\hline
-\textbf{Tên thẻ} & \textbf{Công dụng} & \textbf{Ghi chú} \\ \hline
-Shield & Người chơi sẽ có khiên vĩnh viễn có thể đỡ được 1 đòn tấn công phá công cụ (Cart, Shovel, Hat) bởi thẻ Sabotage. & Có thể áp dụng cho bất cứ ai, không tích lũy \\ \hline
-Binoculars & Khi sử dụng thẻ này, người chơi được nhìn thấy toàn bộ bản đồ từ lúc chơi thẻ cho đến hết Đêm hiện tại. & Có thể áp dụng cho bất cứ ai\\ \hline
-Swap Goals & Trong Đêm, tráo vị trí ngẫu nhiên hoặc chỉ định của 3 thẻ Goal (khi chúng vẫn đang úp). & Thay đổi vị trí kho vàng thực sự \\ \hline
-\end{tabular}
-\end{table}
+\frametitle{Thẻ hành động mới}
+\begin{columns}
+\column{0.33\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{saboteur/Card_Binoculars_S.png}
+    \end{figure}
+    \begin{itemize}
+        \item Nhìn thấy toàn bộ bản đồ từ lúc chơi thẻ cho đến hết \textbf{Đêm} hiện tại.
+    \end{itemize}
+\column{0.33\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{saboteur/Card_Shield_S.png}
+    \end{figure}
+    \begin{itemize}
+        \item Đỡ được 1 đòn tấn công phá công cụ. Không tích lũy
+    \end{itemize}
 
+\column{0.33\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{saboteur/Card_Swap_Goals_S.png}
+        % \caption*{Các loại thẻ đường}
+    \end{figure}
+    \begin{itemize}
+        \item Hoán đổi vị trí của 2 trong 3 thẻ Goal (khi chúng vẫn đang úp)
+    \end{itemize}
+\end{columns}
 \end{frame}
