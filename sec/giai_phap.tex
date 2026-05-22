@@ -1,6 +1,23 @@
 % SLIDE 8: Quy Trình Phát Triển dự án
 \section{V. Giải Pháp Và Công Nghệ}
 
+\begin{frame}
+\frametitle{Điểm yếu của Saboteur}
+\begin{columns}
+    \column{0.05\textwidth}
+    \column{0.4\textwidth}
+    \begin{block}{Saboteur có 1 điểm yếu}
+        Vai trò của của \textbf{Kẻ phá hoại} sẽ dễ bị lộ, thường chỉ sau nửa game.
+    \end{block}
+    \column{0.1\textwidth}
+    \column{0.4\textwidth}
+    \begin{block}{Giải pháp}
+        Sáng tạo ra một biến thể mới cho Saboteur với nhiều sự hỗn loạn hơn.
+    \end{block}
+    \column{0.05\textwidth}
+\end{columns}
+\end{frame}
+
 % New Saboteur
 % 11
 \begin{frame}
@@ -9,59 +26,60 @@
         \centering
         \includegraphics[width=0.5\linewidth]{saboteur/day-night.png}
     \end{figure}
+\centering
 Mỗi round được chia thành hai pha chính: \textbf{Đêm} và \textbf{Ngày}.
 \end{frame}
 
-% 12
+
 \begin{frame}
-\frametitle{Cấu trúc một round}
-
-\textbf{Đêm (Night Phase):}
-\begin{itemize}
-    \item Màn hình/bản đồ tối lại, người chơi \textbf{không nhìn thấy bất kỳ thay đổi nào trên bản đồ} ngoại trừ thông tin lượt hiện tại.
-    \item Thứ tự lượt chơi trong đêm được \textbf{xếp ngẫu nhiên} (không theo chiều kim đồng hồ như bản gốc).
-    \item Mỗi người chơi lần lượt thực hiện lượt:
-\begin{itemize}
-    \item Bản đồ tạm thời hiện ra cho riêng người đó.
-    \item Trong \textbf{15--30 giây} (có thể tùy chỉnh), người chơi thực hiện một trong các hành động quen thuộc như bản gốc.
-    \item Bốc 1 lá bài từ chồng bài úp (nếu còn).
-    \item Bản đồ lại tối đi với người chơi đó.
-\end{itemize}
-    \item Khi tất cả người chơi đã hoàn thành lượt trong đêm, pha Đêm kết thúc và chuyển sang pha Ngày.
-\end{itemize}
-
-\end{frame}
-
-% 13
-\begin{frame}
-\frametitle{Cấu trúc một round}
-\textbf{Ngày (Day Phase):}
+\frametitle{Cấu trúc một Round (Day - Night)}
+\begin{columns}
+    \column{0.49\textwidth}
+    \textbf{Đêm (Night Phase)}
     \begin{itemize}
-        \item Bản đồ được chiếu sáng hoàn toàn, mọi người chơi cùng nhìn thấy toàn bộ thay đổi đã xảy ra trong pha Đêm.
-        \item Người chơi có \textbf{60 giây} (có thể tùy chỉnh) để \textbf{trò chuyện, tranh luận, biện minh} và đọc vị nhau.
-        \item Cuối pha Ngày, thực hiện \textbf{bỏ phiếu}:
+        \item Bản đồ tối, chỉ người chơi hiện tại nhìn thấy
+        \item Thứ tự lượt chơi \textbf{ngẫu nhiên}
+        \item Mỗi người chơi có \textbf{15--30 giây} để:
         \begin{itemize}
-            \item Có thể vote \textbf{skip} hoặc vote một người chơi cụ thể.
-            \item Người bị vote nhiều phiếu nhất sẽ \textbf{không được hành động trong pha Đêm tiếp theo}.
+            \item Đặt thẻ đường / dùng thẻ hành động
+            \item Bốc bài
         \end{itemize}
+        \item Hoàn thành lượt → Bản đồ tối lại
     \end{itemize}
 
+    \column{0.02\textwidth}
+    \centering
+    \rule{0.5pt}{0.6\textheight}   % Đường thẳng phân cách
+
+    \column{0.49\textwidth}
+    \textbf{Ngày (Day Phase)}
+    \begin{itemize}
+        \item Bản đồ sáng hoàn toàn, mọi người cùng nhìn thấy thay đổi
+        \item \textbf{60 giây} để trò chuyện, tranh luận, đọc vị
+        \item Cuối pha: \textbf{Bỏ phiếu}
+        \begin{itemize}
+            \item Vote \textbf{skip} hoặc vote người chơi
+            \item Người bị vote nhiều nhất \textbf{bị cấm hành động} ở Đêm sau
+        \end{itemize}
+    \end{itemize}
+\end{columns}
 \end{frame}
 
-% 15
-% \begin{frame}
-% \frametitle{Thẻ hành động mới (bổ sung thêm vào bộ bài)}
-% \begin{table}[H]
-% \centering
-% \begin{tabular}{|l|p{7cm}|p{4cm}|}
-% \hline
-% \textbf{Tên thẻ} & \textbf{Công dụng} & \textbf{Ghi chú} \\ \hline
-% \includegraphics[width=0.1\linewidth]{saboteur/role-1.png} & Người chơi sẽ có khiên vĩnh viễn có thể đỡ được 1 đòn tấn công phá công cụ (Cart, Shovel, Hat) bởi thẻ Sabotage. & Có thể áp dụng cho bất cứ ai, không tích lũy \\ \hline
-% Binoculars & Khi sử dụng thẻ này, người chơi được nhìn thấy toàn bộ bản đồ từ lúc chơi thẻ cho đến hết Đêm hiện tại. & Có thể áp dụng cho bất cứ ai\\ \hline
-% Swap Goals & Trong Đêm, tráo vị trí ngẫu nhiên hoặc chỉ định của 3 thẻ Goal (khi chúng vẫn đang úp). & Thay đổi vị trí kho vàng thực sự \\ \hline
-% \end{tabular}
-% \end{table}
-% \end{frame}
+\begin{frame}
+\frametitle{Cấu trúc một Round (Day)}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{saboteur/day-night-cycle.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cấu trúc một Round (Night)}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{saboteur/day-cycle.png}
+    \end{figure}
+\end{frame}
 
 \begin{frame}
 \frametitle{Thẻ hành động mới}
@@ -316,7 +334,7 @@ Mỗi round được chia thành hai pha chính: \textbf{Đêm} và \textbf{Ngà
 \end{frame}
 
 \begin{frame}
-\frametitle{Design Patterns Áp Dụng}
+\frametitle{Kiến Trúc Hệ Thống}
     \begin{figure}[H]
         \centering
         \includegraphics[width=1\linewidth]{diagram/Architecture.png}
